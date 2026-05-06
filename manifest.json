@@ -8,6 +8,10 @@
     "storage",
     "notifications"
   ],
+  "host_permissions": [
+    "https://www.googleapis.com/*",
+    "https://oauth2.googleapis.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
