@@ -67,9 +67,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       if (isLoggedIn) {
         const token = await driveService.getAuthToken(false);
-        chrome.identity.removeCachedAuthToken({ token }, () => {
-          checkAuth();
-        });
+        if (token) {
+          // 1. Revoke the token server-side so it's truly invalidated
+          try {
+            await fetch(`https://accounts.google.com/o/oauth2/revoke?token=${token}`);
+          } catch (_) { /* ignore network errors during revoke */ }
+          // 2. Remove from Chrome's cache
+          chrome.identity.removeCachedAuthToken({ token }, () => {
+            // 3. Clear the internal token reference
+            driveService.token = null;
+            setLoggedOut();
+          });
+        } else {
+          setLoggedOut();
+        }
       } else {
         await driveService.getAuthToken(true);
         checkAuth();
