@@ -1,0 +1,16 @@
+# Browser related
+.DS_Store
+Thumbs.db
+
+# Project specific
+.gemini/
+scratch/
+task.md
+implementation_plan.md
+walkthrough.md
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg
+!icons/*.png

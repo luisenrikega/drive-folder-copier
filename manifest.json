@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Drive Folder Copier",
+  "version": "1.0",
+  "description": "Copia carpetas completas en Google Drive manteniendo nombres de archivos.",
+  "permissions": [
+    "identity",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "oauth2": {
+    "client_id": "785753650345-06kp8o6t9o4momeeglvdeos3ha7reeji.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
+  }
+}

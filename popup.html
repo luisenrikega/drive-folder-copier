@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drive Folder Copier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="glow"></div>
+    <header>
+      <div class="icon-container">
+        <img src="icons/icon128.png" alt="Logo" id="main-logo">
+      </div>
+      <h1 data-i18n="appTitle">Drive Copier</h1>
+      <p class="subtitle" data-i18n="subtitle">Copy folders with style</p>
+    </header>
+
+    <main>
+      <div class="input-group">
+        <label for="folder-id" data-i18n="inputLabel">Folder URL or ID</label>
+        <div class="input-wrapper">
+          <input type="text" id="folder-id" data-i18n-placeholder="inputPlaceholder" placeholder="Paste the link here..." spellcheck="false">
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button id="copy-btn" class="primary-btn">
+          <span data-i18n="startCopy">Start Copy</span>
+          <div class="loader hidden"></div>
+        </button>
+        <button id="reset-btn" class="secondary-btn hidden">
+          <span data-i18n="newCopy">New Copy</span>
+        </button>
+      </div>
+
+      <div id="status-container" class="hidden">
+        <div class="progress-info">
+          <span id="status-msg" data-i18n="preparing">Preparing...</span>
+          <span id="progress-text">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="auth-box">
+        <span class="status-dot"></span>
+        <p id="auth-status" data-i18n="notConnected">Not connected</p>
+      </div>
+      <button id="login-btn" class="secondary-btn" data-i18n="connect">Connect</button>
+    </footer>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="driveService.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

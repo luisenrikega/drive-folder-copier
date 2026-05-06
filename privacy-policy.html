@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Drive Folder Copier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --card: #111119;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --accent: #a78bfa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 24px 48px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.15), transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .hero .app-name {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .hero .updated {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .lang-btn {
+      padding: 8px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--text-dim);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      font-size: 1.3rem;
+    }
+
+    p {
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #c4b5fd;
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .highlight-box p {
+      color: var(--text);
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    .content-en, .content-es { display: none; }
+    .content-en.visible, .content-es.visible { display: block; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.75rem; }
+      section { padding: 20px; }
+      .container { padding: 32px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <p class="app-name">Drive Folder Copier</p>
+    <h1 id="hero-title">Privacy Policy</h1>
+    <p class="updated" id="hero-date">Last updated: May 6, 2026</p>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+      <button class="lang-btn" id="btn-es" onclick="setLang('es')">Español</button>
+    </div>
+  </div>
+
+  <!-- ==================== ENGLISH ==================== -->
+  <div class="container content-en visible" id="content-en">
+    <section>
+      <h2><span class="icon">📋</span> Overview</h2>
+      <p>Drive Folder Copier is a Chrome extension that allows users to duplicate folders and their contents within Google Drive. We are committed to protecting your privacy and being transparent about our data practices.</p>
+      <div class="highlight-box">
+        <p><strong>In short:</strong> We do not collect, store, transmit, or sell any of your personal data. Everything happens locally in your browser.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔑</span> Google Account Access</h2>
+      <p>This extension uses <strong>Google OAuth 2.0</strong> to authenticate with your Google account. We request the following scope:</p>
+      <ul>
+        <li><strong>Google Drive API</strong> (<code>drive</code> scope) — Required to read folder structures and copy files within your Google Drive.</li>
+      </ul>
+      <p>Your OAuth token is managed entirely by the Chrome browser via the <code>chrome.identity</code> API. <strong>We never see, store, or transmit your token or Google credentials.</strong></p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📁</span> How We Use Google Drive Data</h2>
+      <p>The extension accesses your Google Drive exclusively to:</p>
+      <ul>
+        <li><strong>Read</strong> the contents of the folder you specify (file names, folder structure).</li>
+        <li><strong>Create</strong> a copy of that folder and its files in your own Drive.</li>
+      </ul>
+      <p>We do <strong>not</strong>:</p>
+      <ul>
+        <li>Access files outside the specified folder.</li>
+        <li>Read, modify, or delete your existing files.</li>
+        <li>Share your files or file metadata with any third party.</li>
+        <li>Store any file content, names, or metadata on external servers.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">💾</span> Data Storage</h2>
+      <p>Drive Folder Copier does <strong>not</strong> use any external servers, databases, or analytics services.</p>
+      <p>All operations are performed <strong>client-side</strong> within your browser. The only data stored locally is the extension's operational state (copy progress), which is temporary and cleared when the browser is closed.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔒</span> Data Security</h2>
+      <ul>
+        <li>All communication with Google Drive is over <strong>HTTPS</strong>.</li>
+        <li>Authentication tokens are managed by Chrome's secure identity system.</li>
+        <li>No data is transmitted to any server other than Google's API endpoints.</li>
+        <li>The extension runs entirely within Chrome's sandboxed environment.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">👤</span> Your Rights</h2>
+      <p>You can revoke this extension's access to your Google account at any time:</p>
+      <ul>
+        <li>Click "Disconnect" within the extension popup.</li>
+        <li>Or visit <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a> and remove "Drive Folder Copier".</li>
+      </ul>
+      <p>Uninstalling the extension removes all locally stored data.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🧒</span> Children's Privacy</h2>
+      <p>This extension is not directed at children under 13. We do not knowingly collect any personal information from children.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📝</span> Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📧</span> Contact</h2>
+      <p>If you have questions or concerns about this privacy policy, please contact us at:</p>
+      <p><strong><a href="mailto:your-email@example.com">your-email@example.com</a></strong></p>
+    </section>
+  </div>
+
+  <!-- ==================== ESPAÑOL ==================== -->
+  <div class="container content-es" id="content-es">
+    <section>
+      <h2><span class="icon">📋</span> Resumen</h2>
+      <p>Drive Folder Copier es una extensión de Chrome que permite a los usuarios duplicar carpetas y su contenido dentro de Google Drive. Estamos comprometidos con la protección de tu privacidad y la transparencia en nuestras prácticas de datos.</p>
+      <div class="highlight-box">
+        <p><strong>En resumen:</strong> No recopilamos, almacenamos, transmitimos ni vendemos ninguno de tus datos personales. Todo ocurre localmente en tu navegador.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔑</span> Acceso a la Cuenta de Google</h2>
+      <p>Esta extensión utiliza <strong>Google OAuth 2.0</strong> para autenticarse con tu cuenta de Google. Solicitamos el siguiente permiso:</p>
+      <ul>
+        <li><strong>API de Google Drive</strong> (scope <code>drive</code>) — Necesario para leer estructuras de carpetas y copiar archivos dentro de tu Google Drive.</li>
+      </ul>
+      <p>Tu token de OAuth es gestionado completamente por el navegador Chrome a través de la API <code>chrome.identity</code>. <strong>Nosotros nunca vemos, almacenamos ni transmitimos tu token o credenciales de Google.</strong></p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📁</span> Cómo Usamos los Datos de Google Drive</h2>
+      <p>La extensión accede a tu Google Drive exclusivamente para:</p>
+      <ul>
+        <li><strong>Leer</strong> el contenido de la carpeta que especifiques (nombres de archivos, estructura de carpetas).</li>
+        <li><strong>Crear</strong> una copia de esa carpeta y sus archivos en tu propio Drive.</li>
+      </ul>
+      <p><strong>No</strong> hacemos lo siguiente:</p>
+      <ul>
+        <li>Acceder a archivos fuera de la carpeta especificada.</li>
+        <li>Leer, modificar o eliminar tus archivos existentes.</li>
+        <li>Compartir tus archivos o metadatos con terceros.</li>
+        <li>Almacenar contenido, nombres o metadatos en servidores externos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">💾</span> Almacenamiento de Datos</h2>
+      <p>Drive Folder Copier <strong>no</strong> utiliza servidores externos, bases de datos ni servicios de analítica.</p>
+      <p>Todas las operaciones se realizan <strong>en el lado del cliente</strong> dentro de tu navegador. El único dato almacenado localmente es el estado operativo de la extensión (progreso de copia), que es temporal y se elimina al cerrar el navegador.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔒</span> Seguridad de Datos</h2>
+      <ul>
+        <li>Toda la comunicación con Google Drive es a través de <strong>HTTPS</strong>.</li>
+        <li>Los tokens de autenticación son gestionados por el sistema seguro de identidad de Chrome.</li>
+        <li>No se transmiten datos a ningún servidor que no sean los endpoints de la API de Google.</li>
+        <li>La extensión se ejecuta completamente dentro del entorno aislado (sandbox) de Chrome.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">👤</span> Tus Derechos</h2>
+      <p>Puedes revocar el acceso de esta extensión a tu cuenta de Google en cualquier momento:</p>
+      <ul>
+        <li>Haz clic en "Salir" dentro del popup de la extensión.</li>
+        <li>O visita <a href="https://myaccount.google.com/permissions" target="_blank">Permisos de Cuenta de Google</a> y elimina "Drive Folder Copier".</li>
+      </ul>
+      <p>Desinstalar la extensión elimina todos los datos almacenados localmente.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🧒</span> Privacidad Infantil</h2>
+      <p>Esta extensión no está dirigida a menores de 13 años. No recopilamos intencionalmente información personal de niños.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📝</span> Cambios en Esta Política</h2>
+      <p>Podemos actualizar esta política de privacidad periódicamente. Cualquier cambio se reflejará en esta página con una fecha de revisión actualizada.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📧</span> Contacto</h2>
+      <p>Si tienes preguntas o inquietudes sobre esta política de privacidad, contáctanos en:</p>
+      <p><strong><a href="mailto:your-email@example.com">your-email@example.com</a></strong></p>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 Drive Folder Copier. All rights reserved.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+      document.getElementById('content-es').classList.toggle('visible', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('hero-title').textContent = lang === 'es' ? 'Política de Privacidad' : 'Privacy Policy';
+      document.getElementById('hero-date').textContent = lang === 'es' ? 'Última actualización: 6 de mayo de 2026' : 'Last updated: May 6, 2026';
+    }
+    // Auto-detect language
+    if (navigator.language.startsWith('es')) setLang('es');
+  </script>
+</body>
+</html>
